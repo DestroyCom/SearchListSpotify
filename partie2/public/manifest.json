@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SearchList",
+  "name": "SearchList for Spotify",
+  "Description": "Search a playlist and display it !",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "orientation": "portrait",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1AAE52",
+  "background_color": "#181818",
+  "lang": "fr-FR"
 }
