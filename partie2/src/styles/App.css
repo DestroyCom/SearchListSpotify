@@ -1,16 +1,29 @@
-#home{
-  height: 100vh;
-  overflow: hidden;
+@font-face {
+  font-family: 'HelveticaBold';
+  src: url('Helvetica-Bold.ttf');
 }
 
-#searchBar, #resultsArea{
-  margin-right:auto;
+body {
+  font-family: HelveticaBold, sans-serif;
+}
+
+#home {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #181818;
+  color: #FFFFFF;
+}
+
+#searchBar,
+#resultsArea {
+  margin-right: auto;
   margin-left: auto;
   width: 95%;
 }
 
-#home>h1{
+#home>h1 {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
+  color: #1DB954;
 }

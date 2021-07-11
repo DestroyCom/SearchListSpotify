@@ -1,23 +1,24 @@
-import '../styles/ResultsArea.css'
+//Imports lié a ReactRouter
 import { Link } from "react-router-dom";
 
-function ResultsArea({items, idupdate, displayResultsUpdate, displayResults}) {
-    function tesstt(id){
-        idupdate(id)
-        displayResultsUpdate(displayResults + 1)
-    }
+//Import du CSS
+import '../styles/ResultsArea.css'
+
+
+function ResultsArea({items}) {
+
     return (
-      <div id='resultsArea'>
+      <section id='resultsArea'>
           <p>{items.playlists.items.length} Résultats trouvés</p>
           <div>
               {items.playlists.items.map(item => (
                   <div key={item.id}>
                         <p>{item.name}</p>
-                        <Link to={'/playlist/' + item.id } onClick={()=>tesstt(item.id)} >VOIR</Link>  
+                        <Link to={'/playlist/' + item.id }  >VOIR</Link>  
                   </div>
               ))}
           </div>
-      </div>
+      </section>
     );
   }
   

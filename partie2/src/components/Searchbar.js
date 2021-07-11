@@ -1,15 +1,18 @@
+//Imports lié a React
 import {React} from 'react';
-import '../styles/SearchBar.css'
+
+//Import du CSS
+import '../styles/SearchBar.css';
 
 function Searchbar({displayResults, displayResultsUpdate, searchInputUpdate}) {
     return ( 
-        <div id='searchBar'>
-            <h3> Rechercher des playlists dans Spotify: </h3>
+        <section id='searchBar'>
+            <h3>Rechercher des playlists dans Spotify: </h3>
             <div>
-                <input type = 'text' onChange = { (e) => searchInputUpdate(e.target.value) } /> 
-                <p onClick = {() => displayResultsUpdate(displayResults + 1)} > Rechercher </p> 
+                <input type = 'text' placeholder='Votre magnifique mot-clé' onChange = { (e) => searchInputUpdate(e.target.value) } /> 
+                <p onClick = {() => displayResultsUpdate(displayResults + 1)} >Rechercher</p> 
             </div>
-        </div>
+        </section>
         );
 }
 
