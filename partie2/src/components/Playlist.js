@@ -84,7 +84,6 @@ function Playlist() {
           })
           .catch(function (error) {
             //Si crash envoyer en erreur 404
-            console.log(error);
             window.location = '../*';
           })
       })

@@ -94,7 +94,6 @@ function App() {
           })
           .catch(function (error) {
             //Si crash ne pas afficher de résultats
-            console.log(error);
             setIsLoaded(false);
           })
       })
