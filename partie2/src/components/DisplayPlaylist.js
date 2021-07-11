@@ -2,7 +2,6 @@ import '../styles/Playlist.css';
 import image from '../img/button.svg';
 
 function DisplayPlaylist(reponse){
-    console.log(reponse)
 
     function displaySongs(item){
         if(item.track === null){

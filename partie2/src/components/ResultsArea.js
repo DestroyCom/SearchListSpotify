@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function ResultsArea({items, idupdate, displayResultsUpdate, displayResults}) {
     function tesstt(id){
         idupdate(id)
-        console.log('apresusdate', id)
         displayResultsUpdate(displayResults + 1)
     }
     return (

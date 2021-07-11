@@ -1,17 +1,22 @@
 import {useState, useEffect} from 'react';
+import axios from 'axios';
+import qs from 'qs';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import Header from './Header.js';
 import ResultsArea from './ResultsArea.js';
 import Searchbar from './Searchbar.js';
 import Playlist from './Playlist.js';
-import axios from 'axios';
-import qs from 'qs';
+
 import '../styles/App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams
-} from "react-router-dom";
+
+
+
 
 function App() {
   const [displayResults, displayResultsUpdate] = useState(0);
@@ -21,12 +26,9 @@ function App() {
   const [searchInput, searchInputUpdate] = useState(null);
   const [id, idupdate] = useState(null);
 
-  console.log(displayResults);
-  console.log(items);
-
   useEffect(() => {
-    const clientId = '8d15b52c72c74971a119714fadd6c015';
-    const clientSecret = 'c0b2ff7371d547e8a3b745b7a3c3a232';
+    const clientId = process.env.REACT_APP_CLIENT_ID;
+    const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
     const headers = {
       headers: {
         Accept: 'application/json',
@@ -44,7 +46,7 @@ function App() {
     if (searchInput === null) {
       searchInputUpdate('null')
     }
-    console.log(searchInput)
+
     let url = 'https://api.spotify.com/v1/search?q=' + searchInput + '&type=playlist'
     axios
       .post(
@@ -78,7 +80,6 @@ function App() {
   }, [displayResults])
 
 
-  console.log('changeid', id)
   return (
     <Router>
       <Switch>

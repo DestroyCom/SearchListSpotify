@@ -16,8 +16,8 @@ function Playlist() {
     const [loaded, loadedUpdate] = useState(false);
 
     useEffect(() => {
-        const clientId = '8d15b52c72c74971a119714fadd6c015';
-        const clientSecret = 'c0b2ff7371d547e8a3b745b7a3c3a232';
+      const clientId = process.env.REACT_APP_CLIENT_ID;
+      const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
         const headers = {
           headers: {
             Accept: 'application/json',
@@ -53,7 +53,6 @@ function Playlist() {
                 headers
               ).then(function (response) {
                 reponseUpdate(response.data)
-                console.log(response.data);
                 loadedUpdate(true);
               })
               .catch(function (error) {
@@ -62,7 +61,6 @@ function Playlist() {
           })
       }, [])
 
-      console.log(reponse)
       
     return (
         <div>
