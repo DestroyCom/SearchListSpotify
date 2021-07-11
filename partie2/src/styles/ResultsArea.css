@@ -1,0 +1,13 @@
+#resultsArea>div{
+    height: 45vh;
+    overflow-x: auto;
+    border: black solid 3px;
+}
+#resultsArea>div>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 5%;
+    border-bottom: black solid 1px;
+}
