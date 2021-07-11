@@ -111,7 +111,7 @@ function App() {
           <div id='home'>
             <Header />
             <Searchbar displayResults={displayResults} displayResultsUpdate={displayResultsUpdate} items={items}  searchInput={searchInput} searchInputUpdate={searchInputUpdate} />
-            { displayResults && isLoaded  ? <ResultsArea items={items} displayResultsUpdate={displayResultsUpdate} displayResults={displayResults} /> : <p>pas de données</p>}
+            { displayResults && isLoaded  ? <ResultsArea items={items} displayResultsUpdate={displayResultsUpdate} displayResults={displayResults} /> : <div id='explication'><h4>Explications :</h4><p>Rentrez simplement des mots clés dans la barre de recherche et cliquez sur "Rechercher"</p></div>}
           </div>
         </Route>
         <Route path='*'>

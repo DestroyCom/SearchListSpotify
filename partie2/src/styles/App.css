@@ -15,7 +15,8 @@ body {
 }
 
 #searchBar,
-#resultsArea {
+#resultsArea, 
+#explication {
   margin-right: auto;
   margin-left: auto;
   width: 95%;
